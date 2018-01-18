@@ -27,5 +27,33 @@
 {
     var myRe = /d(b+)d/g;
     var myArray = myRe.exec("cdbbdbsbzdbdsd");
-    console.log(myArray[0]);
+    //console.log(myArray[0]);
+}
+{
+    function commafy(num){
+  	  return num && num
+  		.toString()
+  		.replace(/(\d)(?=(\d{3})+\.)/g, function($1, $2, $3){
+  			return $2 + ',';
+  		});
+    }
+    //console.log(commafy(1235634.11));
+}
+
+{
+    let videoUrl = "rtsp://10.0.33.44:9000/umksmith5dr5:0:P2P_NPC:0:1:admin:admin/av_stream";
+    console.log(videoUrl.replace(/\:(\d)\:(\d)\:/, function(match, $1, $2, offset, originstr) {
+        return ":"+$1+":1:";
+    }));
+    console.log(videoUrl.replace(/\:(\d)\:(\d)\:/, ":$1:1:"));
+    console.log(videoUrl.match(/\:\d\:(\d)\:/)[1]);
+}
+
+{
+    function replacer(match, p1, p2, p3, offset, string) {
+      // p1 is nondigits, p2 digits, and p3 non-alphanumerics
+      return [p1, p2, p3].join(' - ');
+    }
+    var newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
+    //console.log(newString);  // abc - 12345 - #$*%
 }

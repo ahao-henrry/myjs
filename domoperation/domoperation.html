@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="domoperation.css">
+    <title>domoperation</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <p>Hi, I'm header</p>
+        </header>
+        <hr>
+        <div id="content">
+            <p>Hi, I'm ahao</p>
+            <p>and I'm 18</p>
+            <p>and this is my video</p>
+            <video id="videoPlayer" src="" controls="controls"></video>
+            <p>then, listen my voice</p>
+            <audio id="audioPlayer" src="" controls="controls"></audio>
+            <blockquote>good or bad, hard to say.</blockquote>
+            <pre><code>
+var name = "ahao";
+function setName() {
+    name = "xzh";
+}
+setName();
+console.log(name);
+            </code></pre>
+        </div>
+        <div id="trangle"></div>
+        <form action="/set/setinfo">
+            <fieldset>
+                <legend>设置信息</legend>
+                <label for="form_name">姓名</label>
+                <input id="form_name" type="text">
+                <br>
+                <label for="form_age">年龄</label>
+                <input id="form_age" type="text">
+            </fieldset>
+        </form>
+        <footer id="footer">
+            <hr>
+            <address>桂林七星区</address>
+        </footer>
+    </div>
+</body>
+<script type="text/javascript" src="../util/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="domoperation.js"></script>
+</html>

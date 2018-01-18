@@ -14,7 +14,7 @@ var object = {
     }
 };
 
-console.log(object.getNameFun()());
+//console.log(object.getNameFun()());
 
 
 /*{
@@ -32,3 +32,6 @@ console.log(object.getNameFun()());
 
     console.log(object.getNameFun()());
 }*/
+
+var num = "32435";
+console.log(parseInt(num));
