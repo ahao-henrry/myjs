@@ -64,3 +64,13 @@ var object = {
         a.style.outline = "1px solid #" + (~~(Math.random() * (1 << 24))).toString(16);
     });
 }
+
+{
+    var elems = document.getElementsByTagName('p');
+    for(var i = 0;i < elems.length; i++ ) {
+        elems[i].addEventListener('click',function(e){
+            e.preventDefault();
+            alert('I am link #' + i)
+        },false);
+    }
+}
